@@ -93,13 +93,13 @@ train_data=ImageDataGenerator(
 test_data=ImageDataGenerator(rescale=1./225)
 
 train_set=train_data.flow_from_directory(
-    '/cnn_dataset/training_set/',
+    '/root/task/cnn_dataset/training_set/',
     target_size=(64,64),
     batch_size=32,
     class_mode='binary')
 
 test_set= test_data.flow_from_directory(
-    '/cnn_dataset/test_set/',
+    '/root/task/cnn_dataset/test_set/',
     target_size=(64,64),
     batch_size=32,
     class_mode='binary')
@@ -162,7 +162,7 @@ plt.show()
 from keras.preprocessing import image
 import numpy
 
-predict_image = image.load_img('/kaggle/input/cnn_dataset/single_prediction/cat_or_dog_1.jpg', 
+predict_image = image.load_img('/root/task/cnn_dataset/single_prediction/cat_or_dog_1.jpg', 
                target_size=(64,64))
 
 type(predict_image)
