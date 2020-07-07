@@ -112,8 +112,8 @@ new_model.compile(loss = 'binary_crossentropy',  optimizer = 'Adam', metrics = [
 
 history = new_model.fit(
             train_set,
-            steps_per_epoch=200,
-            epochs=25,
+            steps_per_epoch=2000,
+            epochs=3,
             validation_data=test_set,
             validation_steps=20)
 
