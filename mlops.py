@@ -158,6 +158,22 @@ plt.title('My loss')
 plt.legend()
 plt.show()
 
+_, acc = new_model.evaluate_generator(test_set, steps=len(test_set), verbose=0)
+
+print('> %.3f' % (acc * 100.0))
+
+acc = round(acc,1)
+
+acc = acc*100
+
+print(acc)
+
+file = open("accuracy.txt", "w+")
+
+file.write("{}".format(acc))
+
+file.closed
+
 # %%
 from keras.preprocessing import image
 import numpy
