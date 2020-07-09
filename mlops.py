@@ -162,15 +162,13 @@ _, acc = new_model.evaluate_generator(test_set, steps=len(test_set), verbose=0)
 
 print('> %.3f' % (acc * 100.0))
 
-acc = round(acc,1)
+accuracy = acc*100
 
-acc = acc*100
-
-print(acc)
+print(accuracy)
 
 file = open("accuracy.txt", "w+")
 
-file.write("{}".format(acc))
+file.write("{}".format(accuracy))
 
 file.closed
 
