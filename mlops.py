@@ -166,7 +166,7 @@ accuracy = acc*100
 
 print(accuracy)
 
-file = open("accuracy.txt", "w+")
+file = open("/root/task/accuracy.txt", "w+")
 
 file.write("{}".format(accuracy))
 
@@ -197,7 +197,7 @@ result = new_model.predict(predict_image)
 result
 
 # %%
-new_model.save('my_face_model.h5')
+new_model.save('/root/task/my_face_model.h5')
 
 # %%
 
